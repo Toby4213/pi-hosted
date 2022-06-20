@@ -6363,9 +6363,9 @@
 					"name": "PYDIO_PORT"
 				},
 				{
-					"default": "pydio.example.com:8080",
-					"label": "Public FQDN with Port (443 for SSL)",
-					"name": "PUBLIC_URI"
+					"default": "pydio.example.com",
+					"label": "Public FQDN",
+					"name": "PYDIO_PUBLIC_FQDN"
 				},
 				{
 					"default": "ChangeMe!",
