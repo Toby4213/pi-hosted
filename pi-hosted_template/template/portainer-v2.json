@@ -6212,6 +6212,7 @@
 		{
   			"type": 3,
   			"title": "Penpot",
+			"name": "penpot",
   			"description": "Penpot - The Open-Source design & prototyping platform",
   			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/penpot/penpot\" target=\"_blank\">https://github.com/penpot/penpot</a><br><b>Official Docker Documentation: </b><a href=\"https://help.penpot.app/technical-guide/getting-started/#install-with-docker\" target=\"_blank\">https://help.penpot.app/technical-guide/getting-started/#install-with-docker</a><br><br><br>Penpot - The Open-Source design & prototyping platform",
   			"categories": [
@@ -6278,6 +6279,7 @@
 		{
   			"type": 3,
   			"title": "Restyaboard",
+			"name": "restyaboard",
   			"description": "Trello like kanban board. Tasks, to-dos, chat, etc.",
   			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://restya.com/board/\" target=\"_blank\">https://restya.com/board/</a><br><b>Docker Documentation: </b><a href=\"https://github.com/cangeli/docker-restyaboard\" target=\"_blank\">https://github.com/cangeli/docker-restyaboard</a><br><br><br>Trello like kanban board. Tasks, to-dos, chat, etc.",
   			"categories": [
