@@ -1,0 +1,71 @@
+version: '2.4'
+
+networks:
+  archivebox:
+
+volumes:
+  data_archivebox:
+  data_sonic:
+  data_wayback:
+
+services:
+    archivebox:
+        image: archivebox/archivebox:latest
+        command: server --quick-init 0.0.0.0:8000
+        ports:
+            - ${ARCHIVEBOX_PORT}:8000
+        environment:
+            - ALLOWED_HOSTS=*
+            - ONLY_NEW=False
+            - SAVE_MEDIA=True
+            - FOOTER_INFO="${ARCHIVEBOX_FOOTER_INFO}"
+            - SAVE_WGET=True
+            - SAVE_WARC=True
+            - SAVE_READABILITY=True
+            - SAVE_SCREENSHOT=True
+            - RESOLUTION=1920,2160
+            - SAVE_GIT=True
+            - SAVE_MEDIA=True
+            - SAVE_WGET_REQUISITES=True
+            - CHECK_SSL_VALIDITY=False
+            - CURL_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0"
+            - WGET_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0"
+            - CHROME_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36"
+            - GIT_DOMAINS=github.com,bitbucket.org,gitlab.com,git.sr.ht,codeberg.org,git.launchpad.net
+            - MEDIA_MAX_SIZE=750m
+            - SEARCH_BACKEND_ENGINE=sonic
+            - SEARCH_BACKEND_HOST_NAME=${ARCHIVEBOX_SONIC_HOSTNAME}
+            - SEARCH_BACKEND_PASSWORD=${ARCHIVEBOX_SONIC_PASSWORD}
+        volumes:
+            - data_archivebox:/data
+        networks:
+            - archivebox
+
+    # To run the Sonic full-text search backend, first download the config file to sonic.cfg
+    # curl -O https://raw.githubusercontent.com/ArchiveBox/ArchiveBox/master/etc/sonic.cfg
+    # after starting, backfill any existing Snapshots into the index: docker-compose run archivebox update --index-only
+    sonic:
+       image: valeriansaliou/sonic:v1.3.0
+       #expose:
+       #    - 1491
+       environment:
+           - SEARCH_BACKEND_PASSWORD=${ARCHIVEBOX_SONIC_PASSWORD}
+       volumes:
+           - ${ARCHIVEBOX_SONIC_CFG_PATH}:/etc/sonic.cfg:ro
+           - data_sonic:/var/lib/sonic/store
+       networks:
+           - archivebox
+
+    # Example: Run PYWB in parallel and auto-import WARCs from ArchiveBox
+    pywb:
+        image: webrecorder/pywb:latest
+        entrypoint: /bin/sh 'wb-manager add default /archivebox/archive/*/warc/*.warc.gz; wayback --proxy;'
+        environment:
+            - INIT_COLLECTION=archivebox
+        ports:
+            - ${ARCHIVEBOX_PYWB_PORT}:8080
+        volumes:
+            - data_archivebox:/archivebox
+            - data_wayback:/webarchive
+        networks:
+            - archivebox
