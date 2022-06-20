@@ -11,7 +11,7 @@ services:
       - ${PYDIO_PORT}:8080
     environment:
       - CELLS_LOG_LEVEL=production
-      - CELLS_BIND=:${PYDIO_PORT}
+      - CELLS_BIND=:8080
       - CELLS_EXTERNAL=${PYDIO_PUBLIC_FQDN}
     volumes:
       - cellsdir:/var/cells
