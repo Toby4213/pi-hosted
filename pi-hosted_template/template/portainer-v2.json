@@ -6293,7 +6293,7 @@
 			"logo": "https://raw.githubusercontent.com/Toby4213/pi-hosted/master/images/restyaboard.png",
 			"repository": {
 				"url": "https://github.com/Toby4213/pi-hosted",
-				"stackfile": "stack/penpot.yml"
+				"stackfile": "stack/restyaboard.yml"
 			},
 			"env": [
 				{
