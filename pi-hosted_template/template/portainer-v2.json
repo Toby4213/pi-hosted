@@ -6208,6 +6208,72 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
+		},
+		{
+  			"type": 3,
+  			"title": "Penpot",
+  			"description": "Penpot - The Open-Source design & prototyping platform",
+  			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/penpot/penpot\" target=\"_blank\">https://github.com/penpot/penpot</a><br><b>Official Docker Documentation: </b><a href=\"https://help.penpot.app/technical-guide/getting-started/#install-with-docker\" target=\"_blank\">https://help.penpot.app/technical-guide/getting-started/#install-with-docker</a><br><br><br>Penpot - The Open-Source design & prototyping platform",
+  			"categories": [
+				"Cloud",
+				"Productivity",
+				"Tools",
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/Toby4213/pi-hosted/master/images/penpot.png",
+			"repository": {
+				"url": "https://github.com/Toby4213/pi-hosted",
+				"stackfile": "stack/penpot.yml"
+			},
+			"env": [
+				{
+					"default": "9001",
+					"label": "Penpot Frontend Port",
+					"name": "PENPOT_FRONTEND_PORT"
+				},
+				{
+					"default": "http://penpot-frontend",
+					"label": "Penpot URI",
+					"name": "PENPOT_URI"
+				},
+				{
+					"default": "penpot",
+					"label": "Postgres Database User",
+					"name": "PENPOT_POSTGRES_USER"
+				},
+				{
+					"default": "penpot",
+					"label": "Postgres Database Password",
+					"name": "PENPOT_POSTGRES_PASSWORD"
+				},
+				{
+					"default": "true",
+					"label": "Enable Penpot Telemetry",
+					"name": "PENPOT_TELEMETRY_ENABLED"
+				},
+				{
+					"default": "false",
+					"label": "Enable SMTP, see https://github.com/penpot/penpot/blob/develop/docker/images/config.env for more info.",
+					"description": "If set to true, additional env vars have to be set for the penpot-backend docker services.",
+					"name": "PENPOT_SMTP_ENABLED"
+				}
+				{
+					"default": "no-reply@example.com",
+					"label": "Penpot SMTP From",
+					"name": "PENPOT_SMTP_FROM"
+				},
+				{
+					"default": "no-reply@example.com",
+					"label": "Penpot SMTP Reply To",
+					"name": "PENPOT_SMTP_REPLY_TO"
+				},
+				{
+					"default": "enable-registration",
+					"label": "Penpot Flags",
+					"name": "PENPOT_FLAGS"
+				},
+			]
 		}
 	]
 }
