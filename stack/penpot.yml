@@ -1,0 +1,119 @@
+---
+version: "3.5"
+
+networks:
+  penpot:
+
+volumes:
+  penpot_postgres_data:
+  penpot_assets_data:
+
+services:
+  penpot-frontend:
+    image: "penpotapp/frontend:latest"
+    ports:
+      - ${PENPOT_FRONTEND_PORT}:80
+
+    volumes:
+      - penpot_assets_data:/opt/data
+
+    environment:
+      - PENPOT_PUBLIC_URI=${PENPOT_URI}
+      - PENPOT_TENANT=pro
+      - PENPOT_HTTP_SERVER_HOST=0.0.0.0
+      - PENPOT_DATABASE_URI=postgresql://penpot-postgres/penpot
+      - PENPOT_DATABASE_USERNAME=${PENPOT_POSTGRES_USER}
+      - PENPOT_DATABASE_PASSWORD=${PENPOT_POSTGRES_PASSWORD}
+      - PENPOT_REDIS_URI=redis://penpot-redis/0
+      - PENPOT_ASSETS_STORAGE_BACKEND=assets-fs
+      - PENPOT_STORAGE_ASSETS_FS_DIRECTORY=/opt/data/assets
+      - PENPOT_TELEMETRY_ENABLED=${PENPOT_TELEMETRY_ENABLED}
+      - PENPOT_SMTP_ENABLED=${PENPOT_SMTP_ENABLED}
+      - PENPOT_SMTP_DEFAULT_FROM=${PENPOT_SMTP_FROM}
+      - PENPOT_SMTP_DEFAULT_REPLY_TO=${PENPOT_SMTP_REPLY_TO}
+      - PENPOT_FLAGS=${PENPOT_FLAGS}
+      - PENPOT_DOMAIN_WHITE_LIST=localhost:${PENPOT_FRONTEND_PORT}
+
+
+    depends_on:
+      - penpot-backend
+      - penpot-exporter
+
+    networks:
+      - penpot
+
+  penpot-backend:
+    image: "penpotapp/backend:latest"
+    volumes:
+      - penpot_assets_data:/opt/data
+
+    depends_on:
+      - penpot-postgres
+      - penpot-redis
+
+    environment:
+      - PENPOT_PUBLIC_URI=${PENPOT_URI}
+      - PENPOT_TENANT=pro
+      - PENPOT_HTTP_SERVER_HOST=0.0.0.0
+      - PENPOT_DATABASE_URI=postgresql://penpot-postgres/penpot
+      - PENPOT_DATABASE_USERNAME=${PENPOT_POSTGRES_USER}
+      - PENPOT_DATABASE_PASSWORD=${PENPOT_POSTGRES_PASSWORD}
+      - PENPOT_REDIS_URI=redis://penpot-redis/0
+      - PENPOT_ASSETS_STORAGE_BACKEND=assets-fs
+      - PENPOT_STORAGE_ASSETS_FS_DIRECTORY=/opt/data/assets
+      - PENPOT_TELEMETRY_ENABLED=${PENPOT_TELEMETRY_ENABLED}
+      - PENPOT_SMTP_ENABLED=${PENPOT_SMTP_ENABLED}
+      - PENPOT_SMTP_DEFAULT_FROM=${PENPOT_SMTP_FROM}
+      - PENPOT_SMTP_DEFAULT_REPLY_TO=${PENPOT_SMTP_REPLY_TO}
+      - PENPOT_FLAGS=${PENPOT_FLAGS}
+      - PENPOT_DOMAIN_WHITE_LIST=localhost:${PENPOT_FRONTEND_PORT}
+
+    networks:
+      - penpot
+
+  penpot-exporter:
+    image: "penpotapp/exporter:latest"
+    environment:
+      - PENPOT_PUBLIC_URI=${PENPOT_URI}
+      - PENPOT_TENANT=pro
+      - PENPOT_HTTP_SERVER_HOST=0.0.0.0
+      - PENPOT_DATABASE_URI=postgresql://penpot-postgres/penpot
+      - PENPOT_DATABASE_USERNAME=${PENPOT_POSTGRES_USER}
+      - PENPOT_DATABASE_PASSWORD=${PENPOT_POSTGRES_PASSWORD}
+      - PENPOT_REDIS_URI=redis://penpot-redis/0
+      - PENPOT_ASSETS_STORAGE_BACKEND=assets-fs
+      - PENPOT_STORAGE_ASSETS_FS_DIRECTORY=/opt/data/assets
+      - PENPOT_TELEMETRY_ENABLED=${PENPOT_TELEMETRY_ENABLED}
+      - PENPOT_SMTP_ENABLED=${PENPOT_SMTP_ENABLED}
+      - PENPOT_SMTP_DEFAULT_FROM=${PENPOT_SMTP_FROM}
+      - PENPOT_SMTP_DEFAULT_REPLY_TO=${PENPOT_SMTP_REPLY_TO}
+      - PENPOT_FLAGS=${PENPOT_FLAGS}
+      - PENPOT_DOMAIN_WHITE_LIST=localhost:${PENPOT_FRONTEND_PORT}
+      # Don't touch env var below; this uses internal docker network to
+      # communicate with the frontend.
+      - PENPOT_PUBLIC_URI=http://penpot-frontend
+    networks:
+      - penpot
+
+  penpot-postgres:
+    image: "postgres:13"
+    restart: always
+    stop_signal: SIGINT
+
+    environment:
+      - POSTGRES_INITDB_ARGS=--data-checksums
+      - POSTGRES_DB=penpot
+      - POSTGRES_USER=${PENPOT_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${PENPOT_POSTGRES_PASSWORD}
+
+    volumes:
+      - penpot_postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - penpot
+
+  penpot-redis:
+    image: redis:6
+    restart: always
+    networks:
+      - penpot
