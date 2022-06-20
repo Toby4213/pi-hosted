@@ -6272,7 +6272,68 @@
 					"default": "enable-registration",
 					"label": "Penpot Flags",
 					"name": "PENPOT_FLAGS"
+				}
+			]
+		},
+		{
+  			"type": 3,
+  			"title": "Restyaboard",
+  			"description": "Trello like kanban board. Tasks, to-dos, chat, etc.",
+  			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://restya.com/board/\" target=\"_blank\">https://restya.com/board/</a><br><b>Docker Documentation: </b><a href=\"https://github.com/cangeli/docker-restyaboard\" target=\"_blank\">https://github.com/cangeli/docker-restyaboard</a><br><br><br>Trello like kanban board. Tasks, to-dos, chat, etc.",
+  			"categories": [
+				"todo",
+				"project-management",
+				"Productivity",
+				"Tools",
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/Toby4213/pi-hosted/master/images/restyaboard.png",
+			"repository": {
+				"url": "https://github.com/Toby4213/pi-hosted",
+				"stackfile": "stack/penpot.yml"
+			},
+			"env": [
+				{
+					"default": "admin",
+					"label": "POSTGRES_USER",
+					"name": "POSTGRES_USER"
 				},
+				{
+					"default": "admin",
+					"label": "POSTGRES_PASSWORD",
+					"name": "POSTGRES_PASSWORD"
+				},
+				{
+					"default": "domain",
+					"label": "SMTP_DOMAIN",
+					"name": "SMTP_DOMAIN"
+				},
+				{
+					"default": "user",
+					"label": "SMTP_USERNAME",
+					"name": "SMTP_USERNAME"
+				},
+				{
+					"default": "pass",
+					"label": "SMTP_PASSWORD",
+					"name": "SMTP_PASSWORD"
+				},
+				{
+					"default": "server",
+					"label": "SMTP_SERVER",
+					"name": "SMTP_SERVER"
+				}
+				{
+					"default": "465",
+					"label": "SMTP_PORT",
+					"name": "SMTP_PORT"
+				},
+				{
+					"default": "Etc/UTC",
+					"label": "Timezone",
+					"name": "TZ"
+				}
 			]
 		}
 	]
