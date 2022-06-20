@@ -18,7 +18,7 @@ services:
       - data:/var/cells/data
     networks:
       - pydio
-     depends_on:
+    depends_on:
       - mysql
 
   mysql:
