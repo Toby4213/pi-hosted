@@ -6234,7 +6234,7 @@
 					"name": "PENPOT_FRONTEND_PORT"
 				},
 				{
-					"default": "http://penpot-frontend",
+					"default": "http://localhost:9001",
 					"label": "Penpot URI",
 					"name": "PENPOT_URI"
 				},
