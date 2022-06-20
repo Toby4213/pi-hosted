@@ -6257,7 +6257,7 @@
 					"label": "Enable SMTP, see https://github.com/penpot/penpot/blob/develop/docker/images/config.env for more info.",
 					"description": "If set to true, additional env vars have to be set for the penpot-backend docker services.",
 					"name": "PENPOT_SMTP_ENABLED"
-				}
+				},
 				{
 					"default": "no-reply@example.com",
 					"label": "Penpot SMTP From",
@@ -6323,7 +6323,7 @@
 					"default": "server",
 					"label": "SMTP_SERVER",
 					"name": "SMTP_SERVER"
-				}
+				},
 				{
 					"default": "465",
 					"label": "SMTP_PORT",
