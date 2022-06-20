@@ -4243,13 +4243,13 @@
 			],
 			"image": "linuxserver/pydio:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/pydio-icon.png",
-			"name": "pydio",
+			"name": "pydio-deprecated",
 			"platform": "linux",
 			"ports": [
 				"7526:443/tcp"
 			],
 			"restart_policy": "unless-stopped",
-			"title": "Pydio",
+			"title": "Pydio (DEPRECATED)",
 			"type": 1,
 			"volumes": [
 				{
@@ -6335,6 +6335,53 @@
 					"default": "Etc/UTC",
 					"label": "Timezone",
 					"name": "TZ"
+				}
+			]
+		},
+		{
+  			"type": 3,
+  			"title": "Pydio",
+			"name": "pydio",
+  			"description": "Self-hosted Document Sharing and Collaboration platform (DSC)",
+  			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://pydio.com/en/pydio-cells/overview\" target=\"_blank\">https://pydio.com/en/pydio-cells/overview</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/pydio/cells\" target=\"_blank\">https://hub.docker.com/r/pydio/cells</a><br><br><br>Self-hosted Document Sharing and Collaboration platform (DSC)",
+  			"categories": [
+				"Cloud",
+				"Productivity",
+				"Tools",
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/Toby4213/pi-hosted/master/images/pydio.png",
+			"repository": {
+				"url": "https://github.com/Toby4213/pi-hosted",
+				"stackfile": "stack/pydio.yml"
+			},
+			"env": [
+				{
+					"default": "8080",
+					"label": "PYDIO_PORT",
+					"name": "PYDIO_PORT"
+				},
+				{
+					"default": "pydio.example.com:8080",
+					"label": "Public FQDN with Port (443 for SSL)",
+					"name": "PUBLIC_URI"
+				},
+				{
+					"default": "ChangeMe!",
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD"
+				},
+				{
+					"default": "pydio",
+					"label": "MYSQL_USER",
+					"description": "This has to be configured via the pydio web gui.",
+					"name": "MYSQL_USER"
+				},
+				{
+					"default": "ChangeMe!",
+					"label": "MYSQL_PASSWORD",
+					"description": "This has to be configured via the pydio web gui.",
+					"name": "MYSQL_PASSWORD"
 				}
 			]
 		}
