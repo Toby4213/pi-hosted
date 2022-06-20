@@ -6373,15 +6373,21 @@
 					"name": "MYSQL_ROOT_PASSWORD"
 				},
 				{
+					"default": "cells",
+					"label": "MYSQL_DATABASE",
+					"description": "This also needs to be configured via the pydio web gui.",
+					"name": "MYSQL_DATABASE"
+				},
+				{
 					"default": "pydio",
 					"label": "MYSQL_USER",
-					"description": "This has to be configured via the pydio web gui.",
+					"description": "This also needs to be configured via the pydio web gui.",
 					"name": "MYSQL_USER"
 				},
 				{
 					"default": "ChangeMe!",
 					"label": "MYSQL_PASSWORD",
-					"description": "This has to be configured via the pydio web gui.",
+					"description": "This also needs to be configured via the pydio web gui.",
 					"name": "MYSQL_PASSWORD"
 				}
 			]
