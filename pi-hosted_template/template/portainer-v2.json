@@ -124,7 +124,7 @@
 					"name": "JAVA_OPTS"
 				}
 			],
-			"image": "linuxserver/airsonic:arm32v7-latest",
+			"image": "linuxserver/airsonic:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/airsonic-logo.png",
 			"name": "airsonic",
 			"platform": "linux",
@@ -1085,7 +1085,7 @@
 					"name": "LOCAL_NETWORK"
 				}
 			],
-			"image": "sgtsquiggs/deluge-openvpn:arm32v7-latest",
+			"image": "sgtsquiggs/deluge-openvpn:latest",
 			"name": "deluge-openvpn",
 			"platform": "linux",
 			"ports": [
@@ -1449,7 +1449,7 @@
 				"Other",
 				"Tools"
 			],
-			"description": "[arm] Web File Browser which can be used as a middleware or standalone app.",
+			"description": "Web File Browser which can be used as a middleware or standalone app.",
 			"image": "filebrowser/filebrowser:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
 			"name": "filebrowser",
@@ -1660,10 +1660,10 @@
 					"name": "GOTIFY_DEFAULTUSER_PASS"
 				}
 			],
-			"image": "gotify/server-arm7:latest",
+			"image": "gotify/server:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/gotify.png",
 			"name": "gotify",
-			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://gotify.net/\" target=\"_blank\">https://gotify.net/</a><br><b>Official Docker Documentation: </b><a href=\"https://gotify.net/docs/install\" target=\"_blank\">https://gotify.net/docs/install</a><br><br><br>ARM7 Image. Documentation is Available <a href='https://gotify.net/docs/index'>here</a>.",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://gotify.net/\" target=\"_blank\">https://gotify.net/</a><br><b>Official Docker Documentation: </b><a href=\"https://gotify.net/docs/install\" target=\"_blank\">https://gotify.net/docs/install</a><br><br><br>Documentation is Available <a href='https://gotify.net/docs/index'>here</a>.",
 			"platform": "linux",
 			"ports": [
 				"9008:80/tcp"
@@ -1726,7 +1726,7 @@
 				"Tools"
 			],
 			"description": "A clientless remote desktop gateway.",
-			"image": "oznu/guacamole:armhf",
+			"image": "oznu/guacamole:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/guacamole.png",
 			"name": "guacamole",
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://guacamole.apache.org/\" target=\"_blank\">https://guacamole.apache.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/oznu/guacamole\" target=\"_blank\">https://hub.docker.com/r/oznu/guacamole</a><br><br><br><b>Youtube Video: </b><a href=\"https://www.youtube.com/watch?v=cKAhnf8X1lo&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=3\" target=\"_blank\">Manually Installing Guacamole on Portainer</a><br><br>The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
@@ -1926,7 +1926,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "oznu/homebridge:debian-arm32v7",
+			"image": "oznu/homebridge:debian",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png",
 			"name": "homebridge-debian",
 			"network": "host",
@@ -2026,7 +2026,7 @@
 				"Tools"
 			],
 			"description": "Create agents that monitor and act on your behalf.",
-			"image": "mjysci/huginn:arm32v7",
+			"image": "huginn/huginn:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/huginn.png",
 			"name": "huginn",
 			"platform": "linux",
@@ -2397,7 +2397,7 @@
 				"Tools"
 			],
 			"description": "An alternative private front-end to Reddit",
-			"image": "spikecodes/libreddit:armv7",
+			"image": "spikecodes/libreddit:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/libreddit.png",
 			"name": "libreddit",
 			"platform": "linux",
@@ -2540,7 +2540,7 @@
 					"name": "DB_PORT"
 				}
 			],
-			"image": "linuxserver/lychee:arm32v7-latest",
+			"image": "linuxserver/lychee:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/lychee-icon.png",
 			"name": "lychee",
 			"platform": "linux",
@@ -2657,7 +2657,7 @@
 					"name": "MYSQL_ROOT_PASSWORD"
 				}
 			],
-			"image": "linuxserver/mariadb:arm32v7-latest",
+			"image": "linuxserver/mariadb:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/mariadb-icon.png",
 			"name": "mariadb",
 			"platform": "linux",
@@ -3659,7 +3659,7 @@
 					"name": "PGID"
 				}
 			],
-			"image": "mbentley/omada-controller:latest-armv7l",
+			"image": "mbentley/omada-controller:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/omada.png",
 			"name": "omada-controller",
 			"platform": "linux",
@@ -5009,7 +5009,7 @@
 				"Tools"
 			],
 			"description": "Snippet Box is a simple self-hosted app for organizing your code snippets.",
-			"image": "pawelmalak/snippet-box:arm",
+			"image": "pawelmalak/snippet-box:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/snibox.png",
 			"name": "Snippet-box",
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/pawelmalak/snippet-box\" target=\"_blank\">https://github.com/pawelmalak/snippet-box</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/pawelmalak/snippet-box#with-docker\" target=\"_blank\">https://github.com/pawelmalak/snippet-box#with-docker</a><br><br><br>Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
@@ -5084,17 +5084,12 @@
 			"description": "Run a Speedtest every hour and graph the results.  See https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags for arch options",
 			"env": [
 				{
-					"default": "latest-arm",
-					"label": "arch",
-					"name": "arch"
-				},
-				{
 					"default": "true",
 					"label": "OOKLA_EULA_GDPR",
 					"name": "OOKLA_EULA_GDPR"
 				}
 			],
-			"image": "henrywhitaker3/speedtest-tracker:dev-arm",
+			"image": "henrywhitaker3/speedtest-tracker:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest-tracker.png",
 			"name": "speedtest-tracker",
 			"platform": "linux",
