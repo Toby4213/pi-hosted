@@ -18,6 +18,8 @@ services:
       - data:/var/cells/data
     networks:
       - pydio
+     depends_on:
+      - mysql
 
   mysql:
     image: mysql:5.7
