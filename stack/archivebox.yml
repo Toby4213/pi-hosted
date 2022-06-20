@@ -25,7 +25,6 @@ services:
             - SAVE_SCREENSHOT=True
             - RESOLUTION=1920,2160
             - SAVE_GIT=True
-            - SAVE_MEDIA=True
             - SAVE_WGET_REQUISITES=True
             - CHECK_SSL_VALIDITY=False
             - CURL_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0"
