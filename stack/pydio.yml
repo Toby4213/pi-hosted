@@ -5,7 +5,7 @@ networks:
 
 services:
   cells:
-    image: pydio/cells:latest
+    image: pydio/cells:3.0.6
     restart: unless-stopped
     ports: 
       - ${PYDIO_PORT}:8080
