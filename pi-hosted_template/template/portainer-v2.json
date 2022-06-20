@@ -6391,6 +6391,59 @@
 					"name": "MYSQL_PASSWORD"
 				}
 			]
+		},
+		{
+  			"type": 3,
+  			"title": "Archivebox with sonic and pywb",
+			"name": "archivebox-sonic-pywb",
+  			"description": "Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more... ",
+  			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/ArchiveBox/ArchiveBox\" target=\"_blank\">https://github.com/ArchiveBox/ArchiveBox</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/ArchiveBox/ArchiveBox/wiki/Docker\" target=\"_blank\">https://github.com/ArchiveBox/ArchiveBox/wiki/Docker</a><br><br><br>Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more... ",
+  			"categories": [
+				"Archiving",
+				"Tools",
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/Toby4213/pi-hosted/master/images/archivebox.png",
+			"repository": {
+				"url": "https://github.com/Toby4213/pi-hosted",
+				"stackfile": "stack/archivebox.yml"
+			},
+			"env": [
+				{
+					"default": "8000",
+					"label": "ARCHIVEBOX_PORT",
+					"name": "ARCHIVEBOX_PORT"
+				},
+				{
+					"default": "Content is hosted for personal archiving purposes only. Contact server owner for any takedown requests.",
+					"label": "Archivebox Footer Message",
+					"description": "Some text to display in the footer of the archive index. Useful for providing server admin contact info to respond to takedown requests.",
+					"name": "ARCHIVEBOX_FOOTER_INFO"
+				},
+				{
+					"default": "sonic",
+					"label": "Internal Sonic Hostname",
+					"description": "If the default doesn't work, update this var with the internal ip of the sonic docker container",
+					"name": "ARCHIVEBOX_SONIC_HOSTNAME"
+				},
+				{
+					"default": "SecretPasswordChangeMe",
+					"label": "Sonic Password",
+					"name": "ARCHIVEBOX_SONIC_PASSWORD"
+				},
+				{
+					"default": "/data/sonic.cfg",
+					"label": "Sonic Config, download and modify: https://raw.githubusercontent.com/ArchiveBox/ArchiveBox/master/etc/sonic.cfg",
+					"description": "Save this config file into the portainer data volume and specify it's path here.",
+					"name": "ARCHIVEBOX_SONIC_CFG_PATH"
+				},
+				{
+					"default": "8080",
+					"label": "ARCHIVEBOX_PYWB_PORT",
+					"name": "ARCHIVEBOX_PYWB_PORT"
+				}
+			]
 		}
 	]
 }
