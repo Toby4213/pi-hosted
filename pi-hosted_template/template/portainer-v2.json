@@ -6977,7 +6977,15 @@
 				{
 					"container": "/var/lib/ghost/content"
 				}
-			]
+			],
+			"env": [
+				{
+					"name": "url",
+					"label": "Public URL",
+					"default": "https://example.com/blog/",
+					"description": "Subpath or Third Level Domain: https://blog.example.com/"
+				}
+			],
 		},
 		{
 			"type": 1,
