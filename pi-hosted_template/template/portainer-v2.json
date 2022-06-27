@@ -593,7 +593,7 @@
 			"categories": [
 				"Other",
 				"Tools",
-				"Photo"
+				"Photos"
 			],
 			"description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
 			"env": [
@@ -3282,6 +3282,7 @@
 				"Cloud",
 				"Productivity",
 				"Tools",
+				"Storage",
 				"Other",
 				"Web"
 			],
@@ -3332,6 +3333,7 @@
 				"Productivity",
 				"Tools",
 				"Other",
+				"Storage",
 				"Web"
 			],
 			"description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
@@ -4226,6 +4228,7 @@
 		{
 			"categories": [
 				"Cloud",
+				"Storage",
 				"Other"
 			],
 			"description": "Pydio (formerly AjaXplorer) is a mature open source software solution for file sharing and synchronization. With intuitive user interfaces (web / mobile / desktop), Pydio provides enterprise-grade features to gain back control and privacy of your data: user directory connectors, legacy filesystems drivers, comprehensive admin interface, and much more.",
@@ -4508,7 +4511,7 @@
 		},
 		{
 			"categories": [
-				"project-management",
+				"ProjectManagement",
 				"Other",
 				"Tools"
 			],
@@ -5759,7 +5762,7 @@
 				"Cloud",
 				"Web",
 				"Management",
-				"todo"
+				"Todo"
 			],
 			"description": "Vikunja With Frontend.  The to-do app to organize your life.  Must run tools/install_vikunja.sh before installing the template.  More informantion at https://vikunja.io/",
 			"env": [
@@ -6283,8 +6286,8 @@
   			"description": "Trello like kanban board. Tasks, to-dos, chat, etc.",
   			"note": "<h3>Template created by Toby4213</h3><b>Check my Github page: <a href=\"https://github.com/Toby4213/pi-hosted\" target=\"_blank\">https://github.com/Toby4213/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://restya.com/board/\" target=\"_blank\">https://restya.com/board/</a><br><b>Docker Documentation: </b><a href=\"https://github.com/cangeli/docker-restyaboard\" target=\"_blank\">https://github.com/cangeli/docker-restyaboard</a><br><br><br>Trello like kanban board. Tasks, to-dos, chat, etc.",
   			"categories": [
-				"todo",
-				"project-management",
+				"Todo",
+				"ProjectManagement",
 				"Productivity",
 				"Tools",
 				"Other"
@@ -6348,6 +6351,7 @@
 				"Cloud",
 				"Productivity",
 				"Tools",
+				"Storage",
 				"Other"
 			],
 			"platform": "linux",
@@ -6450,7 +6454,7 @@
 			"title": "Registry",
 			"description": "Docker image registry",
 			"categories": [
-				"docker"
+				"Docker"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -6469,7 +6473,7 @@
 			"title": "Ubuntu",
 			"description": "Debian-based Linux operating system",
 			"categories": [
-				"operating-system"
+				"OS"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
@@ -6482,7 +6486,7 @@
 			"title": "NodeJS",
 			"description": "JavaScript-based platform for server-side and networking applications",
 			"categories": [
-				"development"
+				"Development"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
@@ -6495,7 +6499,7 @@
 			"title": "Nginx",
 			"description": "High performance web server",
 			"categories": [
-				"webserver"
+				"Webserver"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
@@ -6518,7 +6522,7 @@
 			"title": "Httpd",
 			"description": "Open-source HTTP server",
 			"categories": [
-				"webserver"
+				"Webserver"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
@@ -6537,7 +6541,7 @@
 			"title": "Caddy",
 			"description": "Open-source web server with automatic HTTPS written in Go",
 			"categories": [
-				"webserver"
+				"Webserver"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
@@ -6556,7 +6560,7 @@
 			"title": "MySQL",
 			"description": "The most popular open-source database",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
@@ -6586,7 +6590,7 @@
 			"title": "MariaDB",
 			"description": "Performance beyond MySQL",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
@@ -6611,7 +6615,7 @@
 			"title": "PostgreSQL",
 			"description": "The most advanced open-source database",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
@@ -6640,7 +6644,7 @@
 			"title": "Mongo",
 			"description": "Open-source document-oriented database",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
@@ -6659,7 +6663,7 @@
 			"title": "CrateDB",
 			"description": "An open-source distributed SQL database",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
@@ -6679,7 +6683,7 @@
 			"title": "Elasticsearch",
 			"description": "Open-source search and analytics engine",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
@@ -6700,8 +6704,8 @@
 			"description": "Open-source end-to-end software development platform",
 			"note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
 			"categories": [
-				"development",
-				"project-management"
+				"Development",
+				"ProjectManagement"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
@@ -6728,7 +6732,7 @@
 			"title": "Minio",
 			"description": "A distributed object storage server built for cloud applications and devops",
 			"categories": [
-				"storage"
+				"Storage"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
@@ -6762,7 +6766,7 @@
 			"title": "Scality S3",
 			"description": "Standalone AWS S3 protocol server",
 			"categories": [
-				"storage"
+				"Storage"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
@@ -6794,7 +6798,7 @@
 			"title": "SQL Server",
 			"description": "Microsoft SQL Server on Linux",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -6820,7 +6824,7 @@
 			"title": "SQL Server",
 			"description": "Microsoft SQL Server Developer for Windows containers",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "windows",
 			"note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -6851,7 +6855,7 @@
 			"title": "SQL Server Express",
 			"description": "Microsoft SQL Server Express for Windows containers",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "windows",
 			"note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -6882,7 +6886,7 @@
 			"title": "Solr",
 			"description": "Open-source enterprise search platform",
 			"categories": [
-				"search-engine"
+				"SearchEngine"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
@@ -6901,7 +6905,7 @@
 			"title": "Redis",
 			"description": "Open-source in-memory data structure store",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
@@ -6920,7 +6924,7 @@
 			"title": "Redis Cluster",
 			"description": "Open-source in-memory data structure store - Cluster mode",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
@@ -6940,7 +6944,7 @@
 			"title": "RabbitMQ",
 			"description": "Highly reliable enterprise messaging system",
 			"categories": [
-				"messaging"
+				"Messaging"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
@@ -6960,7 +6964,7 @@
 			"title": "Ghost",
 			"description": "Free and open-source blogging platform",
 			"categories": [
-				"blog"
+				"Blog"
 			],
 			"note": "Access the blog management interface under <code>/ghost/</code>.",
 			"platform": "linux",
@@ -7113,7 +7117,7 @@
 			"title": "Mautic",
 			"description": "Open-source marketing automation platform",
 			"categories": [
-				"marketing"
+				"Marketing"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
@@ -7143,7 +7147,7 @@
 			"title": "Jenkins",
 			"description": "Open-source continuous integration tool",
 			"categories": [
-				"continuous-integration"
+				"CI"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
@@ -7164,7 +7168,7 @@
 			"description": "Open-source project management tool",
 			"note": "Default user and password are admin/admin",
 			"categories": [
-				"project-management"
+				"ProjectManagement"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
@@ -7184,8 +7188,8 @@
 			"description": "A web file manager",
 			"note": "Default credentials: admin/admin",
 			"categories": [
-				"filesystem",
-				"storage"
+				"Filesystem",
+				"Storage"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
@@ -7208,7 +7212,7 @@
 			"title": "CommandBox",
 			"description": "ColdFusion (CFML) CLI",
 			"categories": [
-				"development"
+				"Development"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
@@ -7356,7 +7360,7 @@
 			"description": "CockroachDB cluster",
 			"note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
 			"categories": [
-				"database"
+				"Database"
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
