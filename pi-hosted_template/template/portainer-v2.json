@@ -6985,7 +6985,7 @@
 					"default": "https://example.com/blog/",
 					"description": "Subpath or Third Level Domain: https://blog.example.com/"
 				}
-			],
+			]
 		},
 		{
 			"type": 1,
