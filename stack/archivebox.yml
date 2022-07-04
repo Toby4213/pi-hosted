@@ -18,6 +18,7 @@ services:
             - ALLOWED_HOSTS=*
             - ONLY_NEW=False
             - SAVE_MEDIA=True
+            - MEDIA_TIMEOUT=28800
             - FOOTER_INFO="${ARCHIVEBOX_FOOTER_INFO}"
             - SAVE_WGET=True
             - SAVE_WARC=True
